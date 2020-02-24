@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    
+    <inherits name="com.haulmont.cuba.web.widgets.WidgetSet" />
+
+    <inherits name="com.whitestein.vaadin.widgets.wtpdfviewer.Widgetset"/>
+</module>
