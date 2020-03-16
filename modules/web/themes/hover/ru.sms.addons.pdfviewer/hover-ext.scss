@@ -1,4 +1,18 @@
 /* Define your theme modifications inside next mixin */
 @mixin ru_sms_addons_pdfviewer-hover-ext {
+  .wtpdfviewer.remove-down-btn{
+    .secondaryToolbar{
+      .secondaryDownload{
+        display: none;
+      }
+    }
+  }
 
+  .wtpdfviewer.remove-print-btn{
+    .secondaryToolbar{
+      .secondaryPrint{
+        display: none;
+      }
+    }
+  }
 }
