@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.haulmont.cuba">
+
+    <module name="global" blocks="*">
+        <artifact name="pdf-global" appJar="true"/>
+
+        <property name="cuba.metadataConfig" value="+ru/sms/addons/pdfviewer/metadata.xml"/>
+        <property name="cuba.viewsConfig" value="+ru/sms/addons/pdfviewer/views.xml"/>
+    </module>
+    <module name="web" dependsOn="global" blocks="web">
+        <artifact name="pdf-web" appJar="true"/>
+        <artifact name="pdf-web" classifier="web" ext="zip" configuration="webcontent"/>
+        <artifact name="pdf-web-toolkit" appJar="true" classifier="client" ext="jar"
+                  skipIfExists="web-toolkit"/>
+
+        <property name="cuba.springContextConfig" value="+ru/sms/addons/pdfviewer/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig" value="+ru/sms/addons/pdfviewer/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig" value="+ru/sms/addons/pdfviewer/web-screens.xml"/>
+        <property name="cuba.menuConfig" value="+ru/sms/addons/pdfviewer/web-menu.xml"/>
+        <property name="cuba.permissionConfig" value="+ru/sms/addons/pdfviewer/web-permissions.xml"/>
+        <property name="cuba.mainMessagePack" value="+ru.sms.addons.pdfviewer.web"/>
+        <property name="cuba.web.widgetSet" value="ru.sms.addons.pdfviewer.web.toolkit.ui.AppWidgetSet"/>
+    </module>
+    <module name="web-toolkit" dependsOn="web">
+        <artifact name="pdf-web-toolkit"/>
+    </module>
+</app-component>
