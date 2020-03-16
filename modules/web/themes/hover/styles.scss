@@ -1,0 +1,11 @@
+@import "hover-defaults";
+@import "ru.sms.addons.pdfviewer/hover-ext-defaults";
+@import "app-components";
+@import "ru.sms.addons.pdfviewer/hover-ext";
+
+.hover {
+  // include auto-generated app components SCSS
+  @include app_components;
+
+  @include ru_sms_addons_pdfviewer-hover-ext;
+}

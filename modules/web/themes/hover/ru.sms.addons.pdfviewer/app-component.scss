@@ -1,0 +1,5 @@
+@import "hover-ext";
+
+@mixin ru_sms_addons_pdfviewer {
+  @include ru_sms_addons_pdfviewer-hover-ext;
+}

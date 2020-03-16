@@ -13,6 +13,7 @@
         <artifact name="pdf-web" classifier="web" ext="zip" configuration="webcontent"/>
         <artifact name="pdf-web-toolkit" appJar="true" classifier="client" ext="jar"
                   skipIfExists="web-toolkit"/>
+        <artifact name="pdf-web" ext="jar" configuration="themes" classifier="themes"/>
 
         <property name="cuba.springContextConfig" value="+ru/sms/addons/pdfviewer/web-spring.xml"/>
         <property name="cuba.dispatcherSpringContextConfig" value="+ru/sms/addons/pdfviewer/web-dispatcher-spring.xml"/>
