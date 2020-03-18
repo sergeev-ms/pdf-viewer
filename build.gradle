@@ -32,7 +32,13 @@ cuba {
     artifact {
         group = 'ru.sms.addons.pdfviewer'
         version = '0.1'
-        isSnapshot = true
+        isSnapshot = false
+    }
+
+    uploadRepository {
+        url = uri("https://maven.pkg.github.com/sergeev-ms/pdf-viewer")
+        user=project.findProperty("github.user") ?: System.getenv("GITHUB_USER")
+        password=project.findProperty("github.key") ?: System.getenv("GITHUB_TOKEN")
     }
 }
 
