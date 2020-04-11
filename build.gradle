@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.2.1'
+    ext.cubaVersion = '7.2.3'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
@@ -31,7 +31,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'ru.sms.addons.pdfviewer'
-        version = '0.1'
+        version = '0.1.1'
         isSnapshot = false
     }
 
