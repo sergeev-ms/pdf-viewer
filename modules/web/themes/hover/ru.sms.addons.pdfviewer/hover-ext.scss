@@ -1,3 +1,5 @@
-/* Define your theme modifications inside next mixin */
+@import "addons/wtpdfviewer/wtpdfviewer";
+
 @mixin ru_sms_addons_pdfviewer-hover-ext {
+  @include wtpdfviewer;
 }
