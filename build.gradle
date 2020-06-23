@@ -31,7 +31,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'ru.sms.addons.pdfviewer'
-        version = '0.1.2'
+        version = '0.2.0'
         isSnapshot = false
     }
 
@@ -104,7 +104,6 @@ configure(webModule) {
     dependencies {
         compileOnly(servletApi)
         compile(globalModule)
-        compile("com.whitestein.vaadin.widgets:wt-pdf-viewer:2.0.1")
     }
 
     jar {
