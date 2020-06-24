@@ -39,6 +39,11 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     return (WTPdfViewerState) super.getState();
   }
 
+  @Override
+  protected WTPdfViewerState getState(boolean markAsDirty) {
+    return (WTPdfViewerState) super.getState(markAsDirty);
+  }
+
   public void setResource(StreamResource sourceFile) {
     setResource("resourceFile", sourceFile);
   }
@@ -152,4 +157,13 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     }
   }
 
+  public boolean isDownloadVisible() {
+    return getState(false).downloadVisible;
+  }
+
+  public void setDownloadVisible(boolean downloadVisible) {
+    if (isDownloadVisible() != downloadVisible) {
+      getState().downloadVisible = downloadVisible;
+    }
+  }
 }

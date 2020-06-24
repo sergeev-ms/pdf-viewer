@@ -2,6 +2,7 @@ package ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer;
 
 import com.vaadin.client.annotations.OnStateChange;
 import com.vaadin.client.communication.RpcProxy;
+import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.ui.AbstractComponentConnector;
 import com.vaadin.shared.ui.Connect;
 import ru.sms.addons.pdfviewer.web.toolkit.ui.addons.wtpdfviewer.WTPdfViewer;
@@ -76,4 +77,12 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 		getWidget().setResourceFile(getResourceUrl("resourceFile"));
 	}
 
+	@Override
+	public void onStateChanged(StateChangeEvent stateChangeEvent) {
+		super.onStateChanged(stateChangeEvent);
+
+		if (stateChangeEvent.hasPropertyChanged("downloadVisible")) {
+			getWidget().setDownloadVisible(getState().downloadVisible);
+		}
+	}
 }

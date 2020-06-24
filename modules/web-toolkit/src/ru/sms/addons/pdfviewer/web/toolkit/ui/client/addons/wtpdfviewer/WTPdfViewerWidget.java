@@ -140,6 +140,15 @@ public class WTPdfViewerWidget extends HTML {
 		setStyleName("wtpdfviewer");
 	}
 
+	public void setDownloadVisible(boolean downloadVisible) {
+		Style style = secondaryDownload.getStyle();
+		if (downloadVisible) {
+			style.clearDisplay();
+		} else {
+			style.setDisplay(Style.Display.NONE);
+		}
+	}
+
 	/**
 	 * 
 	    <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
