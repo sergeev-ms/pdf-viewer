@@ -3,5 +3,4 @@
     
     <inherits name="com.haulmont.cuba.web.widgets.WidgetSet" />
 
-    <inherits name="com.whitestein.vaadin.widgets.wtpdfviewer.Widgetset"/>
 </module>
