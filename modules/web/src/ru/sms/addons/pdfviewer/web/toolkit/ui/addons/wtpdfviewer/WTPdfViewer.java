@@ -166,4 +166,14 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
       getState().downloadVisible = downloadVisible;
     }
   }
+
+  public boolean isPrintVisible() {
+    return getState(false).printVisible;
+  }
+
+  public void setPrintVisible(boolean printVisible) {
+    if (isPrintVisible() != printVisible) {
+      getState().printVisible = printVisible;
+    }
+  }
 }

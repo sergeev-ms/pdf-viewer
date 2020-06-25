@@ -148,6 +148,14 @@ public class WTPdfViewerWidget extends HTML {
 			style.setDisplay(Style.Display.NONE);
 		}
 	}
+	public void setPrintVisible(boolean printVisible) {
+		Style style = secondaryPrint.getStyle();
+		if (printVisible) {
+			style.clearDisplay();
+		} else {
+			style.setDisplay(Style.Display.NONE);
+		}
+	}
 
 	/**
 	 * 

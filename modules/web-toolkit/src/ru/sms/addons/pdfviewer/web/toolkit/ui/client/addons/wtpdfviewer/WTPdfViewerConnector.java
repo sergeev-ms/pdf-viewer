@@ -84,5 +84,8 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 		if (stateChangeEvent.hasPropertyChanged("downloadVisible")) {
 			getWidget().setDownloadVisible(getState().downloadVisible);
 		}
+		if (stateChangeEvent.hasPropertyChanged("printVisible")) {
+			getWidget().setPrintVisible(getState().printVisible);
+		}
 	}
 }
