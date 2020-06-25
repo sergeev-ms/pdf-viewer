@@ -52,8 +52,16 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 			public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad) {
 				getWidget().setShowPreviousViewOnLoad(showPreviousViewOnLoad);
 			}
-			
 
+			@Override
+			public void download() {
+				getWidget().download();
+			}
+
+			@Override
+			public void toggleHandTool() {
+				getWidget().toggleHandTool();
+			}
 		});
 		
 		getWidget().setErrorListener(error -> rpc.onError(error));

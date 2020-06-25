@@ -82,6 +82,16 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     proxy.setShowPreviousViewOnLoad(showPreviousViewOnLoad);
   }
 
+  public void download() {
+    WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
+    proxy.download();
+  }
+
+  public void toggleHandTool() {
+    WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
+    proxy.toggleHandTool();
+  }
+
   @Override
   public boolean handleConnectorRequest(VaadinRequest request, VaadinResponse response, String path) throws IOException {
     DownloadStream stream = null;

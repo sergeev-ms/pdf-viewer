@@ -112,7 +112,7 @@ public class WTPdfViewerWidget extends HTML {
 	// pdf about to be printed goes here
 	private DivElement printContainer;
 
-  private PdfViewerWidgetErrorListener errorListener;
+	private PdfViewerWidgetErrorListener errorListener;
 
 	public WTPdfViewerWidget() {
 		Document document = Document.get();
@@ -158,61 +158,61 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	/**
-	 * 
-	    <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
-	      <div id="secondaryToolbarButtonContainer">
-	        <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="Switch to Presentation Mode" tabindex="51" data-l10n-id="presentation_mode">
-	          <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
-	        </button>
-	
-	        <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="52" data-l10n-id="open_file">
-	          <span data-l10n-id="open_file_label">Open</span>
-	        </button>
-	
-	        <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="53" data-l10n-id="print">
-	          <span data-l10n-id="print_label">Print</span>
-	        </button>
-	
-	        <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="54" data-l10n-id="download">
-	          <span data-l10n-id="download_label">Download</span>
-	        </button>
-	
-	        <a href="#" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="Current view (copy or open in new window)" tabindex="55" data-l10n-id="bookmark">
-	          <span data-l10n-id="bookmark_label">Current View</span>
-	        </a>
-	
-	        <div class="horizontalToolbarSeparator visibleLargeView"></div>
-	
-	        <button id="firstPage" class="secondaryToolbarButton firstPage" title="Go to First Page" tabindex="56" data-l10n-id="first_page">
-	          <span data-l10n-id="first_page_label">Go to First Page</span>
-	        </button>
-	        <button id="lastPage" class="secondaryToolbarButton lastPage" title="Go to Last Page" tabindex="57" data-l10n-id="last_page">
-	          <span data-l10n-id="last_page_label">Go to Last Page</span>
-	        </button>
-	
-	        <div class="horizontalToolbarSeparator"></div>
-	
-	        <button id="pageRotateCw" class="secondaryToolbarButton rotateCw" title="Rotate Clockwise" tabindex="58" data-l10n-id="page_rotate_cw">
-	          <span data-l10n-id="page_rotate_cw_label">Rotate Clockwise</span>
-	        </button>
-	        <button id="pageRotateCcw" class="secondaryToolbarButton rotateCcw" title="Rotate Counterclockwise" tabindex="59" data-l10n-id="page_rotate_ccw">
-	          <span data-l10n-id="page_rotate_ccw_label">Rotate Counterclockwise</span>
-	        </button>
-	
-	        <div class="horizontalToolbarSeparator"></div>
-	
-	        <button id="toggleHandTool" class="secondaryToolbarButton handTool" title="Enable hand tool" tabindex="60" data-l10n-id="hand_tool_enable">
-	          <span data-l10n-id="hand_tool_enable_label">Enable hand tool</span>
-	        </button>
-	
-	        <div class="horizontalToolbarSeparator"></div>
-	
-	        <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Document Propertiesâ€¦" tabindex="61" data-l10n-id="document_properties">
-	          <span data-l10n-id="document_properties_label">Document Propertiesâ€¦</span>
-	        </button>
-	      </div>
-	    </div>  <!-- secondaryToolbar -->
-	
+	 *
+	 <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+	 <div id="secondaryToolbarButtonContainer">
+	 <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="Switch to Presentation Mode" tabindex="51" data-l10n-id="presentation_mode">
+	 <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
+	 </button>
+
+	 <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="52" data-l10n-id="open_file">
+	 <span data-l10n-id="open_file_label">Open</span>
+	 </button>
+
+	 <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="53" data-l10n-id="print">
+	 <span data-l10n-id="print_label">Print</span>
+	 </button>
+
+	 <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="54" data-l10n-id="download">
+	 <span data-l10n-id="download_label">Download</span>
+	 </button>
+
+	 <a href="#" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="Current view (copy or open in new window)" tabindex="55" data-l10n-id="bookmark">
+	 <span data-l10n-id="bookmark_label">Current View</span>
+	 </a>
+
+	 <div class="horizontalToolbarSeparator visibleLargeView"></div>
+
+	 <button id="firstPage" class="secondaryToolbarButton firstPage" title="Go to First Page" tabindex="56" data-l10n-id="first_page">
+	 <span data-l10n-id="first_page_label">Go to First Page</span>
+	 </button>
+	 <button id="lastPage" class="secondaryToolbarButton lastPage" title="Go to Last Page" tabindex="57" data-l10n-id="last_page">
+	 <span data-l10n-id="last_page_label">Go to Last Page</span>
+	 </button>
+
+	 <div class="horizontalToolbarSeparator"></div>
+
+	 <button id="pageRotateCw" class="secondaryToolbarButton rotateCw" title="Rotate Clockwise" tabindex="58" data-l10n-id="page_rotate_cw">
+	 <span data-l10n-id="page_rotate_cw_label">Rotate Clockwise</span>
+	 </button>
+	 <button id="pageRotateCcw" class="secondaryToolbarButton rotateCcw" title="Rotate Counterclockwise" tabindex="59" data-l10n-id="page_rotate_ccw">
+	 <span data-l10n-id="page_rotate_ccw_label">Rotate Counterclockwise</span>
+	 </button>
+
+	 <div class="horizontalToolbarSeparator"></div>
+
+	 <button id="toggleHandTool" class="secondaryToolbarButton handTool" title="Enable hand tool" tabindex="60" data-l10n-id="hand_tool_enable">
+	 <span data-l10n-id="hand_tool_enable_label">Enable hand tool</span>
+	 </button>
+
+	 <div class="horizontalToolbarSeparator"></div>
+
+	 <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Document Propertiesâ€¦" tabindex="61" data-l10n-id="document_properties">
+	 <span data-l10n-id="document_properties_label">Document Propertiesâ€¦</span>
+	 </button>
+	 </div>
+	 </div>  <!-- secondaryToolbar -->
+
 	 */
 	private void createSecondaryToolbar(Document document, DivElement parent) {
 		secondaryToolbar = createChildDiv(document, parent, "secondaryToolbar");
@@ -286,32 +286,32 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	/**
-	    <div class="findbar hidden doorHanger" id="findbar">
-	      <div id="findbarInputContainer">
-	        <input id="findInput" class="toolbarField" title="Find" placeholder="Find in documentâ€¦" tabindex="91" data-l10n-id="find_input">
-	        <div class="splitToolbarButton">
-	          <button id="findPrevious" class="toolbarButton findPrevious" title="Find the previous occurrence of the phrase" tabindex="92" data-l10n-id="find_previous">
-	            <span data-l10n-id="find_previous_label">Previous</span>
-	          </button>
-	          <div class="splitToolbarButtonSeparator"></div>
-	          <button id="findNext" class="toolbarButton findNext" title="Find the next occurrence of the phrase" tabindex="93" data-l10n-id="find_next">
-	            <span data-l10n-id="find_next_label">Next</span>
-	          </button>
-	        </div>
-	      </div>
-	
-	      <div id="findbarOptionsContainer">
-	        <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
-	        <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">Highlight all</label>
-	        <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
-	        <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">Match case</label>
-	        <span id="findResultsCount" class="toolbarLabel hidden"></span>
-	      </div>
-	
-	      <div id="findbarMessageContainer">
-	        <span id="findMsg" class="toolbarLabel"></span>
-	      </div>
-	    </div>  <!-- findbar -->
+	 <div class="findbar hidden doorHanger" id="findbar">
+	 <div id="findbarInputContainer">
+	 <input id="findInput" class="toolbarField" title="Find" placeholder="Find in documentâ€¦" tabindex="91" data-l10n-id="find_input">
+	 <div class="splitToolbarButton">
+	 <button id="findPrevious" class="toolbarButton findPrevious" title="Find the previous occurrence of the phrase" tabindex="92" data-l10n-id="find_previous">
+	 <span data-l10n-id="find_previous_label">Previous</span>
+	 </button>
+	 <div class="splitToolbarButtonSeparator"></div>
+	 <button id="findNext" class="toolbarButton findNext" title="Find the next occurrence of the phrase" tabindex="93" data-l10n-id="find_next">
+	 <span data-l10n-id="find_next_label">Next</span>
+	 </button>
+	 </div>
+	 </div>
+
+	 <div id="findbarOptionsContainer">
+	 <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+	 <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">Highlight all</label>
+	 <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+	 <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">Match case</label>
+	 <span id="findResultsCount" class="toolbarLabel hidden"></span>
+	 </div>
+
+	 <div id="findbarMessageContainer">
+	 <span id="findMsg" class="toolbarLabel"></span>
+	 </div>
+	 </div>  <!-- findbar -->
 	 */
 	private void createFindBar(Document document, DivElement parent) {
 		findbar = createChildDiv(document, parent, "findbar");
@@ -373,30 +373,30 @@ public class WTPdfViewerWidget extends HTML {
 
 	/**
 	 * Left sidebar with thumbnail, outline and attachments.
-	
-	  <div id="sidebarContainer">
-	    <div id="toolbarSidebar">
-	      <div class="splitToolbarButton toggled">
-	        <button id="viewThumbnail" class="toolbarButton toggled" title="Show Thumbnails" tabindex="2" data-l10n-id="thumbs">
-	           <span data-l10n-id="thumbs_label">Thumbnails</span>
-	        </button>
-	        <button id="viewOutline" class="toolbarButton" title="Show Document Outline (double-click to expand/collapse all items)" tabindex="3" data-l10n-id="document_outline">
-	           <span data-l10n-id="document_outline_label">Document Outline</span>
-	        </button>
-	        <button id="viewAttachments" class="toolbarButton" title="Show Attachments" tabindex="4" data-l10n-id="attachments">
-	           <span data-l10n-id="attachments_label">Attachments</span>
-	        </button>
-	      </div>
-	    </div>
-	    <div id="sidebarContent">
-	      <div id="thumbnailView">
-	      </div>
-	      <div id="outlineView" class="hidden">
-	      </div>
-	      <div id="attachmentsView" class="hidden">
-	      </div>
-	    </div>
-	  </div>  <!-- sidebarContainer -->
+
+	 <div id="sidebarContainer">
+	 <div id="toolbarSidebar">
+	 <div class="splitToolbarButton toggled">
+	 <button id="viewThumbnail" class="toolbarButton toggled" title="Show Thumbnails" tabindex="2" data-l10n-id="thumbs">
+	 <span data-l10n-id="thumbs_label">Thumbnails</span>
+	 </button>
+	 <button id="viewOutline" class="toolbarButton" title="Show Document Outline (double-click to expand/collapse all items)" tabindex="3" data-l10n-id="document_outline">
+	 <span data-l10n-id="document_outline_label">Document Outline</span>
+	 </button>
+	 <button id="viewAttachments" class="toolbarButton" title="Show Attachments" tabindex="4" data-l10n-id="attachments">
+	 <span data-l10n-id="attachments_label">Attachments</span>
+	 </button>
+	 </div>
+	 </div>
+	 <div id="sidebarContent">
+	 <div id="thumbnailView">
+	 </div>
+	 <div id="outlineView" class="hidden">
+	 </div>
+	 <div id="attachmentsView" class="hidden">
+	 </div>
+	 </div>
+	 </div>  <!-- sidebarContainer -->
 	 *
 	 */
 	private void createSidebar(Document document, DivElement parent) {
@@ -462,32 +462,32 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	/**
-	  <div class="splitToolbarButton">
-	    <button id="zoomOut" class="toolbarButton zoomOut" title="Zoom Out" tabindex="21" data-l10n-id="zoom_out">
-	      <span data-l10n-id="zoom_out_label">Zoom Out</span>
-	    </button>
-	    <div class="splitToolbarButtonSeparator"></div>
-	    <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
-	      <span data-l10n-id="zoom_in_label">Zoom In</span>
-	     </button>
-	  </div>
-	  <span id="scaleSelectContainer" class="dropdownToolbarButton">
-	    <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom">
-	      <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">Automatic Zoom</option>
-	      <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">Actual Size</option>
-	      <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">Fit Page</option>
-	      <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">Full Width</option>
-	      <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
-	      <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 50 }'>50%</option>
-	      <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 75 }'>75%</option>
-	      <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 100 }'>100%</option>
-	      <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 125 }'>125%</option>
-	      <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 150 }'>150%</option>
-	      <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 200 }'>200%</option>
-	      <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 300 }'>300%</option>
-	      <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 400 }'>400%</option>
-	    </select>
-	  </span>
+	 <div class="splitToolbarButton">
+	 <button id="zoomOut" class="toolbarButton zoomOut" title="Zoom Out" tabindex="21" data-l10n-id="zoom_out">
+	 <span data-l10n-id="zoom_out_label">Zoom Out</span>
+	 </button>
+	 <div class="splitToolbarButtonSeparator"></div>
+	 <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
+	 <span data-l10n-id="zoom_in_label">Zoom In</span>
+	 </button>
+	 </div>
+	 <span id="scaleSelectContainer" class="dropdownToolbarButton">
+	 <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom">
+	 <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">Automatic Zoom</option>
+	 <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">Actual Size</option>
+	 <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">Fit Page</option>
+	 <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">Full Width</option>
+	 <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
+	 <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 50 }'>50%</option>
+	 <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 75 }'>75%</option>
+	 <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 100 }'>100%</option>
+	 <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 125 }'>125%</option>
+	 <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 150 }'>150%</option>
+	 <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 200 }'>200%</option>
+	 <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 300 }'>300%</option>
+	 <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 400 }'>400%</option>
+	 </select>
+	 </span>
 	 *
 	 */
 
@@ -534,19 +534,19 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	/**
-	 * 
-	   <div class="splitToolbarButton hiddenSmallView">
-	     <button class="toolbarButton pageUp" title="Previous Page" id="previous" tabindex="13" data-l10n-id="previous">
-	       <span data-l10n-id="previous_label">Previous</span>
-	     </button>
-	     <div class="splitToolbarButtonSeparator"></div>
-	     <button class="toolbarButton pageDown" title="Next Page" id="next" tabindex="14" data-l10n-id="next">
-	       <span data-l10n-id="next_label">Next</span>
-	     </button>
-	   </div>
-	   <input type="number" id="pageNumber" class="toolbarField pageNumber" title="Page" value="1" size="4" min="1" tabindex="15" data-l10n-id="page">
-	   <span id="numPages" class="toolbarLabel"></span>
-	 * 
+	 *
+	 <div class="splitToolbarButton hiddenSmallView">
+	 <button class="toolbarButton pageUp" title="Previous Page" id="previous" tabindex="13" data-l10n-id="previous">
+	 <span data-l10n-id="previous_label">Previous</span>
+	 </button>
+	 <div class="splitToolbarButtonSeparator"></div>
+	 <button class="toolbarButton pageDown" title="Next Page" id="next" tabindex="14" data-l10n-id="next">
+	 <span data-l10n-id="next_label">Next</span>
+	 </button>
+	 </div>
+	 <input type="number" id="pageNumber" class="toolbarField pageNumber" title="Page" value="1" size="4" min="1" tabindex="15" data-l10n-id="page">
+	 <span id="numPages" class="toolbarLabel"></span>
+	 *
 	 */
 	private void createPagingSection(Document document, DivElement parent) {
 		DivElement splitToolbarButton = createChildDiv(document, parent, "splitToolbarButton");
@@ -824,115 +824,115 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	public native void startWebViewerLoad(WTPdfViewerWidget instance)
-	/*-{
-	    var configuration = {
-			appContainer: $wnd.document.body,
-			mainContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewerContainer,
-			viewerContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewer,
-			eventBus: null,
-			toolbar: {
-			  container: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::toolbarViewer,
-			  
-			  // paging section
-			  numPages: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::numPages,
-			  pageNumber: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageNumber,
-			  previous: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::previousPage,
-			  next: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::nextPage,
-			  
-			  // zooming section
-			  scaleSelectContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::scaleSelectContainer,
-			  scaleSelect: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::scaleSelect,
-			  customScaleOption: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::customScaleOption,
-			  zoomIn: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomIn,
-			  zoomOut: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomOut,
-			},
-			secondaryToolbar: {
-			  toggleButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryToolbarToggle,
-			  toolbar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryToolbar,
-			  presentationModeButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryPresentationMode,
-			  printButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryPrint,
-			  downloadButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryDownload,
-			    
-			  firstPageButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::firstPage,
-			  lastPageButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::lastPage,
-			  pageRotateCwButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageRotateCw,
-			  pageRotateCcwButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageRotateCcw,
-			  toggleHandToolButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::toggleHandTool,
-		      documentPropertiesButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentProperties,
-			},
-			fullscreen: {},
-			sidebar: { // this is visible on the left if the page outline is open
-				mainContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::mainContainer,
-				outerContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::outerContainer,
-				
-				// turn on and off sidebar
-			    toggleButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::sidebarToggleBtn,
-			    
-				// sidebar content
-				thumbnailView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::thumbnailView,
-				outlineView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::outlineView,
-				attachmentsView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::attachmentsView,
-				
-				// sidebar toolbar buttons (e.g. toolbar visible inside the sidebar)
-				thumbnailButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewThumbnail,
-				outlineButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewOutline,
-				attachmentsButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewAttachments,
-			},
-			findBar: {
-			   // button to turn on and off search bar
-			   toggleButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewFind,
-	
-			   // the search bar itself
-			   bar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findbar,
-			   findField: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findInput,
-			   findPreviousButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findPrevious,
-			   findNextButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findNext,
-			   highlightAllCheckbox: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findHighlightAll,
-			   caseSensitiveCheckbox: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findMatchCase,
-			   findResultsCount: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findResultsCount,
-			   findMsg: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findMsg,
-			   findStatusIcon: null, // web viewer does not have this either
-			},
-			passwordOverlay: {},
-			documentProperties: {
-			   overlayName: 'documentPropertiesOverlay',
-			   container: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentPropertiesOverlay,
-			   closeButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentPropertiesClose,
-			   fields: {
-			     'fileName': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileNameField,
-			     'fileSize': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileSizeField,
-			     
-			     'title': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::titleField,
-			     'author': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::authorField,
-			     'subject': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::subjectField,
-			     'keywords': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::keywordsField,
-			     'creationDate': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::creationDateField,
-			     'modificationDate': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::modificationDateField,
-			     'creator': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::creatorField,
-			     'producer': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::producerField,
-			     'version': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::versionField,
-			     'pageCount': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageCountField,
-			   }
-			},
-			printing: {
-	          printServiceOverlay: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printServiceOverlay,
-	          printCancel: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printCancel,
-			},
-			errorWrapper: {},
-			progressBar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::progress,
-			progressBarOwner: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::root,
-			printContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printContainer,
-			
-			// note that openFileInputName field is not used anymore, both menu item and event handler were removed
-			openFileInputName: 'fileInput',
-			debuggerScriptPath: './debugger.js',
-			defaultUrl: '',
-			workerSrc: 'APP/PUBLISHED/pdf.worker.js',
-		};
-	
-	    var zero = $wnd.lsps.widgets.wtPdfViewerFactory();
-	    this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication = zero.webViewerLoad(configuration);
-	}-*/;
+		/*-{
+			var configuration = {
+				appContainer: $wnd.document.body,
+				mainContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewerContainer,
+				viewerContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewer,
+				eventBus: null,
+				toolbar: {
+					container: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::toolbarViewer,
+
+					// paging section
+					numPages: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::numPages,
+					pageNumber: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageNumber,
+					previous: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::previousPage,
+					next: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::nextPage,
+
+					// zooming section
+					scaleSelectContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::scaleSelectContainer,
+					scaleSelect: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::scaleSelect,
+					customScaleOption: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::customScaleOption,
+					zoomIn: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomIn,
+					zoomOut: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomOut,
+				},
+				secondaryToolbar: {
+					toggleButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryToolbarToggle,
+					toolbar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryToolbar,
+					presentationModeButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryPresentationMode,
+					printButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryPrint,
+					downloadButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryDownload,
+
+					firstPageButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::firstPage,
+					lastPageButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::lastPage,
+					pageRotateCwButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageRotateCw,
+					pageRotateCcwButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageRotateCcw,
+					toggleHandToolButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::toggleHandTool,
+					documentPropertiesButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentProperties,
+				},
+				fullscreen: {},
+				sidebar: { // this is visible on the left if the page outline is open
+					mainContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::mainContainer,
+					outerContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::outerContainer,
+
+					// turn on and off sidebar
+					toggleButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::sidebarToggleBtn,
+
+					// sidebar content
+					thumbnailView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::thumbnailView,
+					outlineView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::outlineView,
+					attachmentsView: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::attachmentsView,
+
+					// sidebar toolbar buttons (e.g. toolbar visible inside the sidebar)
+					thumbnailButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewThumbnail,
+					outlineButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewOutline,
+					attachmentsButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewAttachments,
+				},
+				findBar: {
+					// button to turn on and off search bar
+					toggleButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::viewFind,
+
+					// the search bar itself
+					bar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findbar,
+					findField: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findInput,
+					findPreviousButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findPrevious,
+					findNextButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findNext,
+					highlightAllCheckbox: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findHighlightAll,
+					caseSensitiveCheckbox: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findMatchCase,
+					findResultsCount: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findResultsCount,
+					findMsg: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::findMsg,
+					findStatusIcon: null, // web viewer does not have this either
+				},
+				passwordOverlay: {},
+				documentProperties: {
+					overlayName: 'documentPropertiesOverlay',
+					container: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentPropertiesOverlay,
+					closeButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::documentPropertiesClose,
+					fields: {
+						'fileName': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileNameField,
+						'fileSize': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileSizeField,
+
+						'title': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::titleField,
+						'author': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::authorField,
+						'subject': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::subjectField,
+						'keywords': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::keywordsField,
+						'creationDate': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::creationDateField,
+						'modificationDate': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::modificationDateField,
+						'creator': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::creatorField,
+						'producer': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::producerField,
+						'version': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::versionField,
+						'pageCount': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pageCountField,
+					}
+				},
+				printing: {
+					printServiceOverlay: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printServiceOverlay,
+					printCancel: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printCancel,
+				},
+				errorWrapper: {},
+				progressBar: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::progress,
+				progressBarOwner: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::root,
+				printContainer: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::printContainer,
+
+				// note that openFileInputName field is not used anymore, both menu item and event handler were removed
+				openFileInputName: 'fileInput',
+				debuggerScriptPath: './debugger.js',
+				defaultUrl: '',
+				workerSrc: 'APP/PUBLISHED/pdf.worker.js',
+			};
+
+			var zero = $wnd.lsps.widgets.wtPdfViewerFactory();
+			this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication = zero.webViewerLoad(configuration);
+		}-*/;
 
 	public void setResourceFile(String fileName) {
 		this.fileName = fileName;
@@ -940,68 +940,79 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	public void setErrorListener(PdfViewerWidgetErrorListener errorListener) {
-	  this.errorListener = errorListener;
-	}  
-	
-    public void onClientSideError(String error) {
-      //getRpcProxy(TriStateCheckBoxV8ServerRpc.class).setValue(value);
-      if (errorListener!=null)
-        errorListener.onError(error);
-    }
-     
+		this.errorListener = errorListener;
+	}
+
+	public void onClientSideError(String error) {
+		//getRpcProxy(TriStateCheckBoxV8ServerRpc.class).setValue(value);
+		if (errorListener!=null)
+			errorListener.onError(error);
+	}
+
 	public native void loadResourcePdf(String fileName)
-	/*-{
-	  var fileName = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileName;
-	  if (!fileName) {
-	    return ;
-	  }
-	  var self = this;
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
-        self.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error == null ? "null" : error.message);
-	  });
-	  pdfApplication.webViewerFirstPage();
-	}-*/;
+		/*-{
+			var fileName = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileName;
+			if (!fileName) {
+				return ;
+			}
+			var self = this;
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
+				self.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error == null ? "null" : error.message);
+			});
+			pdfApplication.webViewerFirstPage();
+		}-*/;
 
 	public native void firstPage()
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerFirstPage();
-	}-*/;
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerFirstPage();
+		}-*/;
 
 	public native void lastPage()
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerLastPage();
-	}-*/;
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerLastPage();
+		}-*/;
 
 	public native void previousPage()
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerPreviousPage();
-	}-*/;
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerPreviousPage();
+		}-*/;
 
 	public native void nextPage()
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerNextPage();
-	}-*/;
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerNextPage();
+		}-*/;
 
 	public native void setPage(int page)
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerPageNumberChanged({value: page});
-	}-*/;
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerPageNumberChanged({value: page});
+		}-*/;
 
-	public native void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad) 
-	/*-{
-	  var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerPreferences({showPreviousViewOnLoad: showPreviousViewOnLoad});
-	}-*/;
-	
-	
+	public native void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad)
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.webViewerPreferences({showPreviousViewOnLoad: showPreviousViewOnLoad});
+		}-*/;
+
+	public native void download()
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.download();
+		}-*/;
+
+	public native void toggleHandTool()
+		/*-{
+			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
+			pdfApplication.handTool.toggle();
+		}-*/;
+
 	@FunctionalInterface
 	public interface PdfViewerWidgetErrorListener {
-	  public void onError(String error);
+		public void onError(String error);
 	}
 }

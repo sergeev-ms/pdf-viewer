@@ -17,4 +17,8 @@ public interface WTPdfViewerClientRpc extends ClientRpc {
 	public void setPage(int page);
 
 	public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad);
+
+	public void download();
+
+	public void toggleHandTool();
 }
