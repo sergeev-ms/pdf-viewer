@@ -2168,7 +2168,7 @@ lsps.widgets.wtPdfViewerFactory = function wtPdfViewerFactory() {
                     });
                 }
                 var webViewerOpenFileViaURL;
-                webViewerOpenFileViaURL = function webViewerOpenFileViaURL(file, onError) {
+                webViewerOpenFileViaURL = function webViewerOpenFileViaURL(file, args, onError) {
                     ensureOverlayClosed();
                     if (file && file.lastIndexOf('file:', 0) === 0) {
                         PDFViewerApplication.setTitleUsingUrl(file);
@@ -2188,7 +2188,7 @@ lsps.widgets.wtPdfViewerFactory = function wtPdfViewerFactory() {
                         return;
                     }
                     if (file) {
-                        PDFViewerApplication.open(file).then(function (value) {
+                        PDFViewerApplication.open(file, args).then(function (value) {
                             return value;
                         }, onError);
                     }
@@ -2363,6 +2363,9 @@ lsps.widgets.wtPdfViewerFactory = function wtPdfViewerFactory() {
                 }
                 function webViewerDownload() {
                     PDFViewerApplication.download();
+                }
+                function webViewerHandToolToggle() {
+                    PDFViewerApplication.handTool.toggle();
                 }
                 function webViewerFirstPage() {
                     if (PDFViewerApplication.pdfDocument) {
@@ -2737,6 +2740,8 @@ lsps.widgets.wtPdfViewerFactory = function wtPdfViewerFactory() {
                 exports.webViewerPreviousPage = webViewerPreviousPage;
                 exports.webViewerNextPage = webViewerNextPage;
                 exports.webViewerPageNumberChanged = webViewerPageNumberChanged;
+                exports.webViewerDownload = webViewerDownload;
+                exports.webViewerHandToolToggle = webViewerHandToolToggle;
 
                 /***/ }),
             /* 7 */

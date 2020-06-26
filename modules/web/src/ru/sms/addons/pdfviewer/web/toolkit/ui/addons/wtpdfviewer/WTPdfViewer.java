@@ -52,6 +52,14 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     return (StreamResource) getResource("resourceFile");
   }
 
+  public String getPassword() {
+    return getState(false).password;
+  }
+
+  public void setPassword(String password) {
+    getState().password = password;
+  }
+
   public void firstPage() {
     WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
     proxy.firstPage();

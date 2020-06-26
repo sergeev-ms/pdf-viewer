@@ -19,6 +19,7 @@ public class WTPdfViewerWidget extends HTML {
 	private DivElement passwordOverlay;
 	private DivElement documentPropertiesOverlay;
 	private String fileName;
+	private String password;
 
 	// main toolbar
 	private DivElement toolbar;
@@ -934,9 +935,10 @@ public class WTPdfViewerWidget extends HTML {
 			this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication = zero.webViewerLoad(configuration);
 		}-*/;
 
-	public void setResourceFile(String fileName) {
+	public void setResourceFile(String fileName, String password) {
 		this.fileName = fileName;
-		loadResourcePdf(fileName);
+		this.password = password;
+		loadResourcePdf(fileName, password);
 	}
 
 	public void setErrorListener(PdfViewerWidgetErrorListener errorListener) {
@@ -949,7 +951,7 @@ public class WTPdfViewerWidget extends HTML {
 			errorListener.onError(error);
 	}
 
-	public native void loadResourcePdf(String fileName)
+	public native void loadResourcePdf(String fileName, String password)
 		/*-{
 			var fileName = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileName;
 			if (!fileName) {
@@ -957,7 +959,8 @@ public class WTPdfViewerWidget extends HTML {
 			}
 			var self = this;
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
+			var args = password ? {password: password} : undefined;
+			pdfApplication.webViewerOpenFileViaURL(fileName, args, function(error) {
 				self.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error == null ? "null" : error.message);
 			});
 			pdfApplication.webViewerFirstPage();
@@ -1002,13 +1005,13 @@ public class WTPdfViewerWidget extends HTML {
 	public native void download()
 		/*-{
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.download();
+			pdfApplication.webViewerDownload();
 		}-*/;
 
 	public native void toggleHandTool()
 		/*-{
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.handTool.toggle();
+			pdfApplication.webViewerHandToolToggle();
 		}-*/;
 
 	@FunctionalInterface
