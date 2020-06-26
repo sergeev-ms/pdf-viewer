@@ -1002,13 +1002,13 @@ public class WTPdfViewerWidget extends HTML {
 	public native void download()
 		/*-{
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.download();
+			pdfApplication.webViewerDownload();
 		}-*/;
 
 	public native void toggleHandTool()
 		/*-{
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.handTool.toggle();
+			pdfApplication.webViewerHandToolToggle();
 		}-*/;
 
 	@FunctionalInterface
