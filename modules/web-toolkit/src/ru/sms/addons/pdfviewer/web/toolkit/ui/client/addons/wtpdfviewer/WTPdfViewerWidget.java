@@ -113,6 +113,7 @@ public class WTPdfViewerWidget extends HTML {
 	private DivElement printContainer;
 
 	private PdfViewerWidgetErrorListener errorListener;
+	private String password;
 
 	public WTPdfViewerWidget() {
 		Document document = Document.get();
@@ -934,9 +935,10 @@ public class WTPdfViewerWidget extends HTML {
 			this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication = zero.webViewerLoad(configuration);
 		}-*/;
 
-	public void setResourceFile(String fileName) {
+	public void setResourceFile(String fileName, String password) {
 		this.fileName = fileName;
-		loadResourcePdf(fileName);
+		this.password = password;
+		loadResourcePdf(fileName, password);
 	}
 
 	public void setErrorListener(PdfViewerWidgetErrorListener errorListener) {
@@ -949,7 +951,7 @@ public class WTPdfViewerWidget extends HTML {
 			errorListener.onError(error);
 	}
 
-	public native void loadResourcePdf(String fileName)
+	public native void loadResourcePdf(String fileName, String password)
 		/*-{
 			var fileName = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileName;
 			if (!fileName) {
@@ -957,7 +959,8 @@ public class WTPdfViewerWidget extends HTML {
 			}
 			var self = this;
 			var pdfApplication = this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::pdfApplication;
-			pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
+			var args = password ? {password: password} : undefined;
+			pdfApplication.webViewerOpenFileViaURL(fileName, args, function(error) {
 				self.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error == null ? "null" : error.message);
 			});
 			pdfApplication.webViewerFirstPage();

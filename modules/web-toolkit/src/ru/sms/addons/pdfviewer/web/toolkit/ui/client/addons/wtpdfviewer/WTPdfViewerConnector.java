@@ -82,7 +82,7 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 
 	@OnStateChange("resources")
 	void updateResource() {
-		getWidget().setResourceFile(getResourceUrl("resourceFile"));
+		getWidget().setResourceFile(getResourceUrl("resourceFile"), getState().password);
 	}
 
 	@Override
