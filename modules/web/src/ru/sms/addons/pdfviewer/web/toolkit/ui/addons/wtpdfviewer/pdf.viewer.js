@@ -2742,6 +2742,7 @@ exports.webViewerNextPage = webViewerNextPage;
 exports.webViewerPageNumberChanged = webViewerPageNumberChanged;
 exports.webViewerDownload = webViewerDownload;
 exports.webViewerHandToolToggle = webViewerHandToolToggle;
+exports.webViewerPrint = webViewerPrint;
 
 /***/ }),
 /* 7 */

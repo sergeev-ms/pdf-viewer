@@ -95,6 +95,11 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     proxy.download();
   }
 
+  public void print() {
+    WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
+    proxy.print();
+  }
+
   public void toggleHandTool() {
     WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
     proxy.toggleHandTool();

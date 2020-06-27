@@ -20,5 +20,7 @@ public interface WTPdfViewerClientRpc extends ClientRpc {
 
 	public void download();
 
+	public void print();
+
 	public void toggleHandTool();
 }

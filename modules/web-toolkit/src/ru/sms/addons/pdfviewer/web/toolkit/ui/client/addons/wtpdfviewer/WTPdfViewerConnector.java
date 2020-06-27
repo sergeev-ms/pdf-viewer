@@ -59,6 +59,11 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 			}
 
 			@Override
+			public void print() {
+				getWidget().print();
+			}
+
+			@Override
 			public void toggleHandTool() {
 				getWidget().toggleHandTool();
 			}
