@@ -304,14 +304,14 @@ html {
   font-size: 10px;
 }
 
-body {
+.wtpdfviewer {
   height: 100%;
   width: 100%;
   background-color: #404040;
   background-image: url(images/texture.png);
 }
 
-body,
+.wtpdfviewer,
 input,
 button,
 select {
@@ -874,7 +874,7 @@ select {
 .secondaryToolbarButton,
 .overlayButton {
   min-width: 16px;
-  padding: 2px 6px 0;
+  //padding: 2px 6px 0;
   border: 1px solid transparent;
   border-radius: 2px;
   color: hsla(0,0%,100%,.8);
