@@ -31,8 +31,8 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'ru.sms.addons.pdfviewer'
-        version = '0.2.0'
-        isSnapshot = true
+        version = '0.3.0'
+        isSnapshot = false
     }
 
     uploadRepository {
