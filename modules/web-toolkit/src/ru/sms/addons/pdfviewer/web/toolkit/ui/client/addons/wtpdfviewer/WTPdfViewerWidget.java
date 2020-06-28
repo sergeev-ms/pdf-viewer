@@ -19,6 +19,7 @@ public class WTPdfViewerWidget extends HTML {
 	private DivElement passwordOverlay;
 	private DivElement documentPropertiesOverlay;
 	private String fileName;
+	private String password;
 
 	// main toolbar
 	private DivElement toolbar;
@@ -105,6 +106,9 @@ public class WTPdfViewerWidget extends HTML {
 	private ParagraphElement pageCountField;
 	private ButtonElement documentPropertiesClose;
 
+	//right toolbar
+	private ButtonElement presentationModeBtn;
+
 	// print service overlay - modal window with progress bar
 	private DivElement printServiceOverlay;
 	private ButtonElement printCancel;
@@ -113,7 +117,7 @@ public class WTPdfViewerWidget extends HTML {
 	private DivElement printContainer;
 
 	private PdfViewerWidgetErrorListener errorListener;
-	private String password;
+
 
 	public WTPdfViewerWidget() {
 		Document document = Document.get();
@@ -488,15 +492,26 @@ public class WTPdfViewerWidget extends HTML {
 		toolbarViewerMiddle = createChildDiv(document, toolbarViewer, "toolbarViewerMiddle");
 		createZoomingSection(document, toolbarViewerMiddle);
 
-		toolbarViewerRight = createChildDiv(document, toolbarViewer, "toolbarViewerRight");
-		DivElement verticalToolbarSeparator = createChildDiv(document, toolbarViewerRight, "verticalToolbarSeparator");
-		verticalToolbarSeparator.addClassName("hiddenSmallView");
+		createRightToolbar(document);
 
 		secondaryToolbarToggle = createChildButton(document, toolbarViewerRight, "secondaryToolbarToggle");
 		secondaryToolbarToggle.addClassName("toolbarButton");
 		secondaryToolbarToggle.setTitle("Tools");
 		secondaryToolbarToggle.setTabIndex(36);
 		secondaryToolbarToggle.setAttribute("data-l10n-id", "tools");
+	}
+
+	private void createRightToolbar(Document document) {
+		toolbarViewerRight = createChildDiv(document, toolbarViewer, "toolbarViewerRight");
+
+		presentationModeBtn = createChildButton(document, toolbarViewerRight, "presentationMode");
+		presentationModeBtn.addClassName("toolbarButton hiddenLargeView");
+		presentationModeBtn.setTitle("Switch to Presentation Mode");
+		presentationModeBtn.setTabIndex(31);
+		presentationModeBtn.setAttribute("data-l10n-id", "presentation_mode");
+
+		DivElement verticalToolbarSeparator = createChildDiv(document, toolbarViewerRight, "verticalToolbarSeparator");
+		verticalToolbarSeparator.addClassName("hiddenSmallView");
 	}
 
 	/**
@@ -896,6 +911,7 @@ public class WTPdfViewerWidget extends HTML {
 					customScaleOption: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::customScaleOption,
 					zoomIn: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomIn,
 					zoomOut: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::zoomOut,
+					presentationModeButton: this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::presentationModeBtn
 				},
 				secondaryToolbar: {
 					toggleButton:  this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::secondaryToolbarToggle,
