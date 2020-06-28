@@ -8,4 +8,7 @@
     
     <gui:screens base-packages="ru.sms.addons.pdfviewer.web"/>
 
+    <bean id="cuba_BootstrapListener"
+          class="ru.sms.addons.pdfviewer.web.bootstrap.CustomBootstrapListener"/>
+
 </beans>

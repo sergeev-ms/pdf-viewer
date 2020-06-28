@@ -13,3 +13,9 @@ Add custom application component to your project:
 * Artifact group: `ru.sms.addons.pdfviewer`
 * Artifact name: `pdf-global`
 * Version: *add-on version*
+
+For pdf-viewer localization `CubaBootstrapListener` was replaced with `CustomBootstrapListener`. 
+So if you replace `CubaBootstrapListener` in your base project you have to reimplement resource appending
+from the add-on's `CustomBootstrapListener`.
+
+The locale of pdf-viewer depends on browser locale, not on cuba application. Includes only `en-us` and `ru` locales.
