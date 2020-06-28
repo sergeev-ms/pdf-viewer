@@ -435,6 +435,7 @@ public class WTPdfViewerWidget extends HTML {
 		// create sidebar toolbar
 		toolbarSidebar = createChildDiv(document, sidebarContainer, "toolbarSidebar");
 		DivElement splitToolbarButton = createChildDiv(document, toolbarSidebar, "splitToolbarButton");
+		splitToolbarButton.addClassName("toggled");
 		viewThumbnail = createChildButton(document, splitToolbarButton, "viewThumbnail");
 		viewThumbnail.setTabIndex(2);
 		viewThumbnail.addClassName("toolbarButton");
@@ -606,7 +607,7 @@ public class WTPdfViewerWidget extends HTML {
 		nextPage.setTitle("Next Page");
 		nextPage.setAttribute("data-l10n-id", "next");
 
-		pageNumber = createChildNumber(document, splitToolbarButton, "pageNumber");
+		pageNumber = createChildNumber(document, parent, "pageNumber");
 		pageNumber.addClassName("toolbarField");
 		pageNumber.setTitle("Page");
 		pageNumber.setValue("1");
@@ -615,7 +616,7 @@ public class WTPdfViewerWidget extends HTML {
 		pageNumber.setTabIndex(15);
 		pageNumber.setAttribute("data-l10n-id","page");
 
-		numPages = createChildSpan(document, splitToolbarButton, "numPages");
+		numPages = createChildSpan(document, parent, "numPages");
 		numPages.addClassName("toolbarLabel");
 	}
 
