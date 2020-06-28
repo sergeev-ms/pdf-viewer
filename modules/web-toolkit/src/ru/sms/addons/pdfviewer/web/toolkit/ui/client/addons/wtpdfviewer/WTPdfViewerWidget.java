@@ -485,7 +485,7 @@ public class WTPdfViewerWidget extends HTML {
 		createPagingSection(document, toolbarViewerLeft);
 
 		toolbarViewerMiddle = createChildDiv(document, toolbarViewer, "toolbarViewerMiddle");
-		createZoomingSection(document, toolbarViewerLeft);
+		createZoomingSection(document, toolbarViewerMiddle);
 
 		toolbarViewerRight = createChildDiv(document, toolbarViewer, "toolbarViewerRight");
 		DivElement verticalToolbarSeparator = createChildDiv(document, toolbarViewerRight, "verticalToolbarSeparator");
