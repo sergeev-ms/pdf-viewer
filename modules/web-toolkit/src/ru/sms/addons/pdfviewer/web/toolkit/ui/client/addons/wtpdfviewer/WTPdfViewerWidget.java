@@ -225,48 +225,69 @@ public class WTPdfViewerWidget extends HTML {
 		secondaryPresentationMode = createChildButton(document, secondaryToolbar, "secondaryPresentationMode");
 		secondaryPresentationMode.addClassName("secondaryToolbarButton presentationMode");
 		secondaryPresentationMode.setTitle("Switch to Presentation Mode");
-		secondaryPresentationMode.setInnerText("Presentation Mode");
 		secondaryPresentationMode.setTabIndex(51);
+		secondaryPresentationMode.setAttribute("data-l10n-id", "presentation_mode");
+		SpanElement secondaryPresentationModeChildSpan = createChildSpan(document, secondaryPresentationMode, "");
+		secondaryPresentationModeChildSpan.setInnerText("Presentation Mode");
+		secondaryPresentationModeChildSpan.setAttribute("data-l10n-id", "presentation_mode_label");
 
 		secondaryPrint = createChildButton(document, secondaryToolbar, "secondaryPrint");
 		secondaryPrint.addClassName("secondaryToolbarButton print");
 		secondaryPrint.setTitle("Print");
-		secondaryPrint.setInnerText("Print");
 		secondaryPrint.setTabIndex(53);
+		secondaryPrint.setAttribute("data-l10n-id", "print");
+		SpanElement secondaryPrintChildSpan = createChildSpan(document, secondaryPrint, "");
+		secondaryPrintChildSpan.setInnerText("Print");
+		secondaryPrintChildSpan.setAttribute("data-l10n-id", "print_label");
 
 		secondaryDownload = createChildButton(document, secondaryToolbar, "secondaryDownload");
 		secondaryDownload.addClassName("secondaryToolbarButton download");
 		secondaryDownload.setTitle("Download");
-		secondaryDownload.setInnerText("Download");
 		secondaryDownload.setTabIndex(54);
+		secondaryDownload.setAttribute("data-l10n-id", "download");
+		SpanElement secondaryDownloadChildSpan = createChildSpan(document, secondaryDownload, "");
+		secondaryDownloadChildSpan.setInnerText("Download");
+		secondaryDownloadChildSpan.setAttribute("data-l10n-id", "download_label");
 
 		createChildDiv(document, secondaryToolbar, "horizontalToolbarSeparator");
 
 		firstPage = createChildButton(document, secondaryToolbar, "firstPage");
 		firstPage.addClassName("secondaryToolbarButton");
 		firstPage.setTitle("Go to First Page");
-		firstPage.setInnerText("Go to First Page");
 		firstPage.setTabIndex(56);
+		firstPage.setAttribute("data-l10n-id", "first_page");
+		SpanElement firstPageChildSpan = createChildSpan(document, firstPage, "");
+		firstPageChildSpan.setInnerText("Go to First Page");
+		firstPageChildSpan.setAttribute("data-l10n-id", "first_page_label");
 
 		lastPage = createChildButton(document, secondaryToolbar, "lastPage");
 		lastPage.addClassName("secondaryToolbarButton");
 		lastPage.setTitle("Go to Last Page");
-		lastPage.setInnerText("Go to Last Page");
 		lastPage.setTabIndex(57);
+		lastPage.setAttribute("data-l10n-id", "last_page");
+		SpanElement lastPageChildSpan = createChildSpan(document, lastPage, "");
+		lastPageChildSpan.setInnerText("Go to Last Page");
+		lastPageChildSpan.setAttribute("data-l10n-id", "last_page_label");
 
 		createChildDiv(document, secondaryToolbar, "horizontalToolbarSeparator");
 
 		pageRotateCw = createChildButton(document, secondaryToolbar, "rotateCw");
 		pageRotateCw.addClassName("secondaryToolbarButton");
 		pageRotateCw.setTitle("Rotate Clockwise");
-		pageRotateCw.setInnerText("Rotate Clockwise");
 		pageRotateCw.setTabIndex(58);
+		pageRotateCw.setAttribute("data-l10n-id", "page_rotate_cw");
+		SpanElement pageRotateCwChildSpan = createChildSpan(document, pageRotateCw, "");
+		pageRotateCwChildSpan.setInnerText("Rotate Clockwise");
+		pageRotateCwChildSpan.setAttribute("data-l10n-id", "page_rotate_cw_label");
 
 		pageRotateCcw = createChildButton(document, secondaryToolbar, "rotateCcw");
 		pageRotateCcw.addClassName("secondaryToolbarButton");
 		pageRotateCcw.setTitle("Rotate Counterclockwise");
-		pageRotateCcw.setInnerText("Rotate Counterclockwise");
+		pageRotateCcw.setAttribute("data-l10n-id", "page_rotate_ccw");
 		pageRotateCcw.setTabIndex(59);
+		SpanElement pageRotateCcwChildSpan = createChildSpan(document, pageRotateCcw, "");
+		pageRotateCcwChildSpan.setInnerText("Rotate Counterclockwise");
+		pageRotateCcwChildSpan.setAttribute("data-l10n-id", "page_rotate_ccw_label");
 
 		createChildDiv(document, secondaryToolbar, "horizontalToolbarSeparator");
 
@@ -282,8 +303,12 @@ public class WTPdfViewerWidget extends HTML {
 		documentProperties = createChildButton(document, secondaryToolbar, "documentProperties");
 		documentProperties.addClassName("secondaryToolbarButton");
 		documentProperties.setTitle("Document Properties");
-		documentProperties.setInnerText("Document Properties");
 		documentProperties.setTabIndex(61);
+		documentProperties.setAttribute("data-l10n-id", "document_properties");
+		SpanElement documentPropertiesChildSpan = createChildSpan(document, documentProperties, "");
+		documentPropertiesChildSpan.setInnerText("Document Properties");
+		documentPropertiesChildSpan.setAttribute("data-l10n-id", "document_properties_label");
+
 	}
 
 	/**
@@ -326,18 +351,21 @@ public class WTPdfViewerWidget extends HTML {
 		findInput.setTitle("Find");
 		findInput.setPropertyString("placeholder", "Find in document");
 		findInput.setTabIndex(91);
+		findInput.setAttribute("data-l10n-id", "find_input");
 
 		DivElement splitToolbarButton = createChildDiv(document, findbarInputContainer, "splitToolbarButton");
 		findPrevious = createChildButton(document, splitToolbarButton, "findPrevious");
 		findPrevious.addClassName("toolbarButton");
 		findPrevious.setTitle("Find the previous occurrence of the phrase");
 		findPrevious.setTabIndex(92);
+		findPrevious.setAttribute("data-l10n-id","find_previous");
 
 		createChildDiv(document, splitToolbarButton, "splitToolbarButtonSeparator");
 		findNext = createChildButton(document, splitToolbarButton, "findNext");
 		findNext.addClassName("toolbarButton");
 		findNext.setTitle("Find the next occurrence of the phrase");
 		findNext.setTabIndex(93);
+		findNext.setAttribute("data-l10n-id","find_next");
 
 		//additional options - highlight all, match case
 		findbarOptionsContainer = createChildDiv(document, findbar, "findbarOptionsContainer");
@@ -351,6 +379,7 @@ public class WTPdfViewerWidget extends HTML {
 		findHighlightAllLabel.addClassName("toolbarLabel");
 		findHighlightAllLabel.setHtmlFor(findHighlightAll.getId());
 		findHighlightAllLabel.setInnerText("Highlight all");
+		findHighlightAllLabel.setAttribute("data-l10n-id", "find_highlight");
 
 		findMatchCase = createChildCheckbox(document, findbarOptionsContainer, "findMatchCase");
 		findMatchCase.addClassName("toolbarField");
@@ -361,6 +390,7 @@ public class WTPdfViewerWidget extends HTML {
 		findMatchCaseLabel.addClassName("toolbarLabel");
 		findMatchCaseLabel.setHtmlFor(findMatchCase.getId());
 		findMatchCaseLabel.setInnerText("Match case");
+		findMatchCaseLabel.setAttribute("data-l10n-id", "find_match_case_label");
 
 		findResultsCount = createChildSpan(document, findbarOptionsContainer, "findResultsCount");
 		findResultsCount.addClassName("toolbarLabel");
@@ -409,16 +439,19 @@ public class WTPdfViewerWidget extends HTML {
 		viewThumbnail.setTabIndex(2);
 		viewThumbnail.addClassName("toolbarButton");
 		viewThumbnail.setTitle("Show Thumbnails");
+		viewThumbnail.setAttribute("data-l10n-id", "thumbs");
 
 		viewOutline = createChildButton(document, splitToolbarButton, "viewOutline");
 		viewOutline.setTabIndex(3);
 		viewOutline.addClassName("toolbarButton");
 		viewOutline.setTitle("Show Document Outline (double-click to expand/collapse all items)");
+		viewOutline.setAttribute("data-l10n-id", "document_outline");
 
 		viewAttachments = createChildButton(document, splitToolbarButton, "viewAttachments");
 		viewAttachments.setTabIndex(4);
 		viewAttachments.addClassName("toolbarButton");
 		viewAttachments.setTitle("Show Attachments");
+		viewAttachments.setAttribute("data-l10n-id", "attachments");
 
 		// create sidebar content
 		sidebarContent = createChildDiv(document, sidebarContainer, "sidebarContent");
@@ -438,6 +471,7 @@ public class WTPdfViewerWidget extends HTML {
 		sidebarToggleBtn = createChildButton(document, toolbarViewerLeft, "sidebarToggle");
 		sidebarToggleBtn.addClassName("toolbarButton");
 		sidebarToggleBtn.setTabIndex(11);
+		sidebarToggleBtn.setAttribute("data-l10n-id", "toggle_sidebar");
 
 		toolbarButtonSpacer = createChildDiv(document, toolbarViewerLeft, "toolbarButtonSpacer");
 
@@ -445,6 +479,7 @@ public class WTPdfViewerWidget extends HTML {
 		viewFind.addClassName("toolbarButton");
 		viewFind.setTabIndex(12);
 		viewFind.setTitle("Find in Document");
+		viewFind.setAttribute("data-l10n-id", "findbar");
 
 		//paging - previous, next, current page number, jump and all pages
 		createPagingSection(document, toolbarViewerLeft);
@@ -460,6 +495,7 @@ public class WTPdfViewerWidget extends HTML {
 		secondaryToolbarToggle.addClassName("toolbarButton");
 		secondaryToolbarToggle.setTitle("Tools");
 		secondaryToolbarToggle.setTabIndex(36);
+		secondaryToolbarToggle.setAttribute("data-l10n-id", "tools");
 	}
 
 	/**
@@ -499,6 +535,7 @@ public class WTPdfViewerWidget extends HTML {
 		zoomOut.addClassName("toolbarButton");
 		zoomOut.setTabIndex(21);
 		zoomOut.setTitle("Zoom Out");
+		zoomOut.setAttribute("data-l10n-id","zoom_out");
 
 		createChildDiv(document, splitToolbarButton, "splitToolbarButtonSeparator");
 
@@ -506,6 +543,7 @@ public class WTPdfViewerWidget extends HTML {
 		zoomIn.addClassName("toolbarButton");
 		zoomIn.setTabIndex(21);
 		zoomIn.setTitle("Zoom In");
+		zoomIn.setAttribute("data-l10n-id","zoom_in");
 
 		scaleSelectContainer = createChildSpan(document, parent, "scaleSelectContainer");
 		scaleSelectContainer.addClassName("dropdownToolbarButton");
@@ -513,25 +551,26 @@ public class WTPdfViewerWidget extends HTML {
 		scaleSelect = createChildSelect(document, scaleSelectContainer, "scaleSelect");
 		scaleSelect.setTitle("Zoom");
 		scaleSelect.setTabIndex(23);
+		scaleSelect.setAttribute("data-l10n-id", "zoom");
 
-		createChildOption(document, scaleSelect, "auto", "Automatic Zoom");
-		createChildOption(document, scaleSelect, "page-actual", "Actual Size");
-		createChildOption(document, scaleSelect, "page-fit", "Fit Page");
-		createChildOption(document, scaleSelect, "page-width", "Full Width");
+		createChildOption(document, scaleSelect, "auto", "Automatic Zoom", "page_scale_auto");
+		createChildOption(document, scaleSelect, "page-actual", "Actual Size", "page_scale_actual");
+		createChildOption(document, scaleSelect, "page-fit", "Fit Page", "page_scale_fit");
+		createChildOption(document, scaleSelect, "page-width", "Full Width", "page_scale_width");
 
 		//<option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
-		customScaleOption = createChildOption(document, scaleSelect, "custom", "");
+		customScaleOption = createChildOption(document, scaleSelect, "custom", "", null);
 		customScaleOption.setDisabled(true);
 		customScaleOption.setAttribute("hidden", "true");
 
-		createChildOption(document, scaleSelect, "0.5", "50%");
-		createChildOption(document, scaleSelect, "0.75", "75%");
-		createChildOption(document, scaleSelect, "1", "100%");
-		createChildOption(document, scaleSelect, "1.25", "125%");
-		createChildOption(document, scaleSelect, "1.5", "150%");
-		createChildOption(document, scaleSelect, "2", "200%");
-		createChildOption(document, scaleSelect, "3", "300%");
-		createChildOption(document, scaleSelect, "4", "400%");
+		createChildOption(document, scaleSelect, "0.5", "50%", null);
+		createChildOption(document, scaleSelect, "0.75", "75%", null);
+		createChildOption(document, scaleSelect, "1", "100%", null);
+		createChildOption(document, scaleSelect, "1.25", "125%", null);
+		createChildOption(document, scaleSelect, "1.5", "150%", null);
+		createChildOption(document, scaleSelect, "2", "200%", null);
+		createChildOption(document, scaleSelect, "3", "300%", null);
+		createChildOption(document, scaleSelect, "4", "400%", null);
 	}
 
 	/**
@@ -557,6 +596,7 @@ public class WTPdfViewerWidget extends HTML {
 		previousPage.addClassName("toolbarButton");
 		previousPage.setTabIndex(13);
 		previousPage.setTitle("Previous Page");
+		previousPage.setAttribute("data-l10n-id", "previous");
 
 		createChildDiv(document, splitToolbarButton, "splitToolbarButtonSeparator");
 
@@ -564,6 +604,7 @@ public class WTPdfViewerWidget extends HTML {
 		nextPage.addClassName("toolbarButton");
 		nextPage.setTabIndex(14);
 		nextPage.setTitle("Next Page");
+		nextPage.setAttribute("data-l10n-id", "next");
 
 		pageNumber = createChildNumber(document, splitToolbarButton, "pageNumber");
 		pageNumber.addClassName("toolbarField");
@@ -572,6 +613,7 @@ public class WTPdfViewerWidget extends HTML {
 		pageNumber.setSize(4);
 		pageNumber.setAttribute("min", "1");
 		pageNumber.setTabIndex(15);
+		pageNumber.setAttribute("data-l10n-id","page");
 
 		numPages = createChildSpan(document, splitToolbarButton, "numPages");
 		numPages.addClassName("toolbarLabel");
@@ -623,37 +665,40 @@ public class WTPdfViewerWidget extends HTML {
 		documentPropertiesOverlay.addClassName("hidden");
 
 		DivElement dialog = createChildDiv(document, documentPropertiesOverlay, "dialog");
-		fileNameField = addDocumentPropertiesRow(document, dialog, "File name:");
-		fileSizeField = addDocumentPropertiesRow(document, dialog, "File size:");
+		fileNameField = addDocumentPropertiesRow(document, dialog, "File name:", "document_properties_file_name");
+		fileSizeField = addDocumentPropertiesRow(document, dialog, "File size:", "document_properties_file_size");
 
 		createChildDiv(document, dialog, "separator");
 
-		titleField = addDocumentPropertiesRow(document, dialog, "Title:");
-		authorField = addDocumentPropertiesRow(document, dialog, "Author:");
-		subjectField = addDocumentPropertiesRow(document, dialog, "Subject:");
-		keywordsField = addDocumentPropertiesRow(document, dialog, "Keywords:");
-		creationDateField = addDocumentPropertiesRow(document, dialog, "Creation Date:");
-		modificationDateField = addDocumentPropertiesRow(document, dialog, "Modification Date:");
-		creatorField = addDocumentPropertiesRow(document, dialog, "Creator:");
+		titleField = addDocumentPropertiesRow(document, dialog, "Title:", "document_properties_title");
+		authorField = addDocumentPropertiesRow(document, dialog, "Author:", "document_properties_author");
+		subjectField = addDocumentPropertiesRow(document, dialog, "Subject:", "document_properties_subject");
+		keywordsField = addDocumentPropertiesRow(document, dialog, "Keywords:", "document_properties_keywords");
+		creationDateField = addDocumentPropertiesRow(document, dialog, "Creation Date:", "document_properties_creation_date");
+		modificationDateField = addDocumentPropertiesRow(document, dialog, "Modification Date:", "document_properties_modification_date");
+		creatorField = addDocumentPropertiesRow(document, dialog, "Creator:", "document_properties_creator");
 
 		createChildDiv(document, dialog, "separator");
 
-		producerField = addDocumentPropertiesRow(document, dialog, "PDF Producer:");
-		versionField = addDocumentPropertiesRow(document, dialog, "PDF Version:");
-		pageCountField = addDocumentPropertiesRow(document, dialog, "Page Count:");
+		producerField = addDocumentPropertiesRow(document, dialog, "PDF Producer:", "document_properties_producer");
+		versionField = addDocumentPropertiesRow(document, dialog, "PDF Version:", "document_properties_version");
+		pageCountField = addDocumentPropertiesRow(document, dialog, "Page Count:", "document_properties_page_count");
 
 		DivElement buttonRow = createChildDiv(document, dialog, "buttonRow");
 		documentPropertiesClose = createChildButton(document, buttonRow, "documentPropertiesClose");
 		documentPropertiesClose.addClassName("overlayButton");
 		documentPropertiesClose.setInnerText("Close");
+		documentPropertiesClose.setAttribute("data-l10n-id", "document_properties_close");
 
 	}
 
-	private ParagraphElement addDocumentPropertiesRow(Document document, DivElement dialog, String label) {
+	private ParagraphElement addDocumentPropertiesRow(Document document, DivElement dialog, String label,
+													  String locId) {
 		DivElement row = createChildDiv(document, dialog, "row");
 
 		SpanElement span = createChildSpan(document, row, "");
 		span.setInnerText(label);
+		span.setAttribute("data-l10n-id", locId);
 
 		ParagraphElement result = createChildP(document, row);
 		result.setInnerText("-");
@@ -814,10 +859,14 @@ public class WTPdfViewerWidget extends HTML {
 		return result;
 	}
 
-	private OptionElement createChildOption(Document document, SelectElement select, String value, String label) {
+	private OptionElement createChildOption(Document document, SelectElement select, String value, String label,
+											String locId) {
 		OptionElement option = document.createOptionElement();
 		option.setValue(value);
 		option.setInnerText(label);
+		if (locId != null) {
+			option.setAttribute("data-l10n-id", locId);
+		}
 
 		select.add(option, null);
 
