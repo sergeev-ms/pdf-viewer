@@ -9,4 +9,5 @@ public class WTPdfViewerState extends com.vaadin.shared.AbstractComponentState {
     public boolean downloadVisible = true;
     public boolean printVisible = true;
     public String password = null;
+    public boolean zoomWithoutModifiers = false;
 }

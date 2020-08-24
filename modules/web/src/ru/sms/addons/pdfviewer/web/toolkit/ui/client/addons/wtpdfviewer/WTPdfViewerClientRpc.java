@@ -6,21 +6,23 @@ import com.vaadin.shared.communication.ClientRpc;
 // For sending information about the changes to component state, use State instead
 public interface WTPdfViewerClientRpc extends ClientRpc {
 
-	public void firstPage();
+	void firstPage();
 
-	public void lastPage();
+	void lastPage();
 
-	public void nextPage();
+	void nextPage();
 
-	public void previousPage();
+	void previousPage();
 
-	public void setPage(int page);
+	void setPage(int page);
 
-	public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad);
+	void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad);
 
-	public void download();
+	void download();
 
-	public void print();
+	void print();
 
-	public void toggleHandTool();
+	void toggleHandTool();
+
+    void setZoomWithoutModifiers(boolean withNoModifiers);
 }

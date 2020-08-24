@@ -67,6 +67,11 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 			public void toggleHandTool() {
 				getWidget().toggleHandTool();
 			}
+
+			@Override
+			public void setZoomWithoutModifiers(boolean withNoModifiers) {
+				getWidget().setZoomWithoutModifiers(withNoModifiers);
+			}
 		});
 		
 		getWidget().setErrorListener(error -> rpc.onError(error));
@@ -99,6 +104,9 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 		}
 		if (stateChangeEvent.hasPropertyChanged("printVisible")) {
 			getWidget().setPrintVisible(getState().printVisible);
+		}
+		if (stateChangeEvent.hasPropertyChanged("zoomWithoutModifiers")) {
+			getWidget().setZoomWithoutModifiers(getState().zoomWithoutModifiers);
 		}
 	}
 }

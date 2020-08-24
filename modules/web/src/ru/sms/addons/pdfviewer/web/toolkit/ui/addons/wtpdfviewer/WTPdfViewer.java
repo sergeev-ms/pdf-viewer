@@ -105,6 +105,15 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
     proxy.toggleHandTool();
   }
 
+  public boolean isZoomWithoutModifiers() {
+    return getState(false).zoomWithoutModifiers;
+  }
+
+  public void setZoomWithoutModifiers(boolean withoutModifiers) {
+    if (withoutModifiers != isZoomWithoutModifiers())
+      getState().zoomWithoutModifiers = withoutModifiers;
+  }
+
   @Override
   public boolean handleConnectorRequest(VaadinRequest request, VaadinResponse response, String path) throws IOException {
     DownloadStream stream = null;
@@ -130,7 +139,7 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
        * following order of events can happen:
        * setResource("one.pdf");
        * setResource("two.pdf");
-       * 
+       *
        * handleConnectorRequest(..., one.pdf); <- in this case one.pdf resource is no longer available, only two.pdf is
        * 										 <- it is better to return nothing and let client show error then return wrong pdf 
        *                                       <- however in pdf viewer we expect the second handleConnectorRequest to come shortly

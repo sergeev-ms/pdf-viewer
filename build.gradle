@@ -32,7 +32,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'ru.sms.addons.pdfviewer'
-        version = '0.3.3'
+        version = '0.3.4'
         isSnapshot = false
     }
 
