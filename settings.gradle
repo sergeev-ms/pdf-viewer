@@ -1,6 +1,7 @@
 rootProject.name = 'pdfviewer'
 def modulePrefix = 'pdf'
-include(":${modulePrefix}-global", ":${modulePrefix}-web", ":${modulePrefix}-web-toolkit")
+include(":${modulePrefix}-global", ":${modulePrefix}-web", ":${modulePrefix}-web-toolkit", ":${modulePrefix}-core")
 project(":${modulePrefix}-global").projectDir = new File(settingsDir, 'modules/global')
 project(":${modulePrefix}-web").projectDir = new File(settingsDir, 'modules/web')
 project(":${modulePrefix}-web-toolkit").projectDir = new File(settingsDir, 'modules/web-toolkit')
+project(":${modulePrefix}-core").projectDir = new File(settingsDir, 'modules/core')

@@ -26,4 +26,9 @@
     <module name="web-toolkit" dependsOn="web">
         <artifact name="pdf-web-toolkit"/>
     </module>
+    <module name="core" dependsOn="global" blocks="core">
+        <artifact name="pdf-core" appJar="true"/>
+        <property name="cuba.springContextConfig" value="+ru/sms/addons/pdfviewer/spring.xml"/>
+        <property name="cuba.mainMessagePack" value="+ru.sms.addons.pdfviewer.core"/>
+    </module>
 </app-component>

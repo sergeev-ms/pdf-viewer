@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://caption"
+        messagesPack="ru.sms.addons.pdfviewer.web.screens.pdfdemo">
+    <layout expand="pdfBox" spacing="true">
+        <hbox spacing="true">
+            <checkBox id="download" caption="Download" align="MIDDLE_LEFT"/>
+            <button id="toggleHandToolBtn" caption="Toggle HandTool"/>
+            <button id="downloadBtn" caption="Download"/>
+            <button id="lastPageBtn" caption="Last Page"/>
+        </hbox>
+        <vbox id="pdfBox" width="100%"/>
+    </layout>
+</window>
