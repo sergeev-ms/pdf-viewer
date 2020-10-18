@@ -3,7 +3,8 @@ CUBA add-on based on Vaadin add-on [WT PDF Viewer](https://github.com/Whitestein
 
 | Platform Version | Add-on Version |
 | ---------------- | -------------- |
-| 7.2.7            | 0.3.x          |
+| 7.2.9            | 0.3.4          |
+| 7.2.7            | 0.3.3          |
 | 7.2.6            | 0.3.2          |
 | 7.2.5            | 0.3.1          |
 | 7.2.3            | 0.1.1          |
