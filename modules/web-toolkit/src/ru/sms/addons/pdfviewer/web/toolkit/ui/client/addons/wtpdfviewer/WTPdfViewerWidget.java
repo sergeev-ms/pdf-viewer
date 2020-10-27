@@ -137,7 +137,10 @@ public class WTPdfViewerWidget extends HTML {
 		progress = createChildDiv_withId(document, loadingBar, "progress");
 
 		createViewerContainer(document, mainContainer);
-		printContainer = createChildDiv(document, root, "printContainer");
+		// Skip appending print container because it will be appending
+		// dynamical at the top of page
+		printContainer = createChildDiv(document, root, "printContainer", false);
+		printContainer.setId("printContainer");
 
 		setElement(root);
 		startWebViewerLoad(this);
@@ -806,8 +809,13 @@ public class WTPdfViewerWidget extends HTML {
 	}
 
 	private DivElement createChildDiv(Document document, Element parent, String nameId) {
+		return createChildDiv(document, parent, nameId, true);
+	}
+
+	private DivElement createChildDiv(Document document, Element parent, String nameId, boolean append) {
 		DivElement result = createDiv(document, nameId);
-		parent.appendChild(result);
+		if (append)
+			parent.appendChild(result);
 
 		return result;
 	}
@@ -968,7 +976,6 @@ public class WTPdfViewerWidget extends HTML {
 					fields: {
 						'fileName': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileNameField,
 						'fileSize': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::fileSizeField,
-
 						'title': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::titleField,
 						'author': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::authorField,
 						'subject': this.@ru.sms.addons.pdfviewer.web.toolkit.ui.client.addons.wtpdfviewer.WTPdfViewerWidget::subjectField,
